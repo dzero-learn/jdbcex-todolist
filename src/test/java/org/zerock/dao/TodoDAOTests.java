@@ -27,7 +27,7 @@ public class TodoDAOTests {
     public void testInsert() throws Exception {
         TodoVO todoVo = TodoVO.builder()
                 .title("test2")
-                .dueDate(LocalDate.of(2025,02,21))
+                .dueDate(LocalDate.of(2025,03,06))
                 .build();
 
         todoDAO.insert(todoVo);
@@ -42,7 +42,7 @@ public class TodoDAOTests {
 
     @Test
     public void testSelectOne() throws Exception {
-        Long tno = 1L;
+        Long tno = 2L;
 
         TodoVO vo = todoDAO.selectOne(tno);
 
@@ -51,7 +51,7 @@ public class TodoDAOTests {
 
     @Test
     public void testDeleteOne() throws Exception {
-        Long tno = 1L;
+        Long tno = 2L;
 
         todoDAO.deleteOne(tno);
     }
@@ -59,9 +59,9 @@ public class TodoDAOTests {
     @Test
     public void testUpdateOne() throws Exception {
         TodoVO todoVo = TodoVO.builder()
-                .tno(2L)
+                .tno(3L)
                 .title("updateTest")
-                .dueDate(LocalDate.of(2025,02,22))
+                .dueDate(LocalDate.of(2025,03,06))
                 .finished(true)
                 .build();
 
